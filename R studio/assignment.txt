@@ -1,0 +1,108 @@
+#Assignment R
+
+# Ashwani Dhankhar
+#Reg. no. - 180612s005
+
+
+#1. Write a R program to create a sequence of numbers from 20 to 50 and find the mean of numbers from 20 to 60 and sum of numbers from 51 to 91.
+
+
+#Creating sequence from 20 to  50
+
+Sequence1 = seq(20,50)
+print(Sequence1)
+
+#Mean from numbers 20:60
+
+mean1=mean(20:60)
+print(mean1)
+
+#sum of the numbers from 51 to 91
+
+addition= sum(51:91)
+print(addition)
+
+
+#################################################################
+
+
+
+#2. Write a R program to take input from the user (name and age) and display the values. Also print the version of R installation.
+
+#user input 
+age=as.integer(readline(prompt = "enter your age  :"))
+name=readline(prompt = "enter your name :")
+
+print(paste("Hi",name,"Your age is ",age))
+
+#print current version
+print(version[["version.string"]])
+
+
+
+
+#####################################################################
+
+#3. Write a R program to get the first 10 Fibonacci numbers.
+
+len = 10
+number = numeric(len)
+# setting 1 to first and second index 
+number[1] = 1
+number[2] = 1
+# loop to start from third index
+for (i in 3:len) { 
+  number[i] = number[i-1] + number[i-2]
+} 
+print(number)
+
+##########################################
+
+
+#4. Write a R program to find the factors of a given number.
+
+
+user <- as.integer(readline(prompt = "Enter a number to find its factors:"))
+
+print(paste("The factors of",user,"are:"))
+  for(i in 1:user) {
+    if((user %% i) == 0) {
+      print(i)
+    }
+  }
+'''
+
+
+
+#5. Write a R program to create a Dataframes which contain details of 5 employees and display the details
+
+
+# Creating dataframe
+work.data <- data.frame(
+  id <- c(1:5),
+  name <- c("Ashwani","Lavish","Ankit","Rohan","Diksha"),
+  gender <- c("Male","Male","Male","Male","Female"),
+  salary <- c('118000','2000','30000','12000','114000'),
+  stringsAsFactors = FALSE
+)
+
+# PRINTING DATA
+print(work.data)
+
+
+#############################################################
+
+#6. Write a R program to create a 5 × 4 matrix , 3 × 3 matrix with labels and fill the matrix by rows and 2 × 2 matrix with labels and fill the matrix by columns.
+
+
+# matrix of 5 X 4
+matrix_1 = matrix(c(1:20),ncol = 4,nrow = 5)
+print(matrix_1)
+
+# 3 X 3 matrix 
+matrix_2 = matrix(c(1:9),nrow = 3,ncol = 3,byrow = TRUE, dimnames = list(c("row1","row2","row3"),c("col1","col2","col3")))
+print(matrix_2)
+
+# 2 X 2 matrix
+matrix_3 = matrix(c(1:4), nrow = 2, ncol = 2, byrow = FALSE, dimnames = list(c("row1","row2"),c("col1","col2")))
+print(matrix_3)

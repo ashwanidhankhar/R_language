@@ -1,0 +1,8 @@
+introduction of r - history basic syntax data types variables
+
+
+
+loop fucntion matrix
+data frames
+read from csv and excel
+charts
